@@ -19,4 +19,4 @@ useradd -m -o -u $uid -g $gid protractor
 webdriver-manager start --detach &
 sleep 4
 # replace config with your protractor json
-sudo -u protractor xvfb-run --server-args="-screen 0 ${SCREEN_RES}" -a protractor ./config.json
+sudo -u protractor xvfb-run --server-args="-screen 0 ${SCREEN_RES}" -a $@
