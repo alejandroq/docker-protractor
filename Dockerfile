@@ -23,4 +23,4 @@ COPY .docker/enviornment /etc/sudoers.d/
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null SCREEN_RES=1280x1024x24
 WORKDIR /protractor
-# ENTRYPOINT ["bash"]
+ENTRYPOINT ["bash"]
