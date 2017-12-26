@@ -9,3 +9,4 @@ TODO:
 
 - build out documentation
 - tests with travis (running ng, protractor, etc)
+- adopt tagging in semver
