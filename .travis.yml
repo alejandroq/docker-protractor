@@ -1,0 +1,11 @@
+language: bash
+branches:
+  only: 
+    - master
+    - dev
+services:
+  - docker
+script: 
+  - bash ./test
+after_success:
+  - bash ./deploy

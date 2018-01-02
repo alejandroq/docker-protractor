@@ -1,0 +1,6 @@
+# !/bin/bash
+set -e
+AUTHOR=alejandroq
+CONTAINER=docker-protractor
+# make build
+docker run -v $(PWD)/examples/angular-example:/protractor -w /protractor  "$AUTHOR/$CONTAINER" ./test

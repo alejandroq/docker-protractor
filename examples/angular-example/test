@@ -1,0 +1,3 @@
+# !/bin/bash
+set -e
+./node_modules/@angular/cli/bin/ng e2e --aot --prod

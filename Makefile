@@ -6,7 +6,7 @@ all: build
 update: tag push
 
 build:
-	docker build -t $(DOCKER_HUB_USER)/$(CONTAINER_NAME) .
+	docker build -t $(DOCKER_HUB_USER)/$(CONTAINER_NAME) -f src/Dockerfile .
 
 tag: 
 	docker tag $(DOCKER_HUB_USER)/$(CONTAINER_NAME) $(DOCKER_HUB_USER)/$(CONTAINER_NAME):$(TAG)

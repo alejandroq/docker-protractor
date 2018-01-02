@@ -1,7 +1,7 @@
 FROM node:9.3-slim
 LABEL author="quesadaaba@gmail.com"
 WORKDIR /tmp
-COPY webdriver-version.js ./
+COPY ./src/webdriver-version.js ./
 ENV CHROME_PACKAGE="google-chrome-stable_63.0.3239.84-1_amd64.deb" NODE_PATH=/usr/local/lib/node_modules:/protractor/node_modules
 RUN npm install -g protractor minimist && \
     node ./webdriver-version.js --chromedriver 2.32 && \
@@ -17,8 +17,8 @@ RUN npm install -g protractor minimist && \
     rm -rf /var/lib/apt/lists/* \
     rm ${CHROME_PACKAGE} && \
     mkdir /protractor
-COPY protractor.sh /
-COPY enviornment /etc/sudoers.d/
+COPY ./src/protractor.sh /
+COPY ./src/enviornment /etc/sudoers.d/
 # Fix for the issue with Selenium, as described here:
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null SCREEN_RES=1280x1024x24
