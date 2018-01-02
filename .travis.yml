@@ -6,6 +6,6 @@ branches:
 services:
   - docker
 script: 
-  - bash ./test
+  - bash ./travis-run
 after_success:
-  - bash ./deploy
+  - bash ./travis-deploy
