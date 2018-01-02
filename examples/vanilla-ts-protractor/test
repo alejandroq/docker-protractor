@@ -1,0 +1,8 @@
+# !/bin/bash
+set -e -x
+npm install
+./node_modules/typescript/bin/tsc
+webdriver-manager update
+webdriver-manager start &
+sleep 4
+protractor dist/conf.js
