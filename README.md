@@ -8,6 +8,7 @@ Need in Protractor config:
 no-sandbox configuration
 
 ```js
+// Protractor Conf
 chromeOptions: {
       args: [
         "--headless",
@@ -16,6 +17,14 @@ chromeOptions: {
         "--window-size=800,600"
       ]
     }
+// Karma Conf
+browsers: ['ChromeHeadlessNoSandbox'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
 ```
 
 

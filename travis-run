@@ -2,6 +2,6 @@
 set -e
 AUTHOR=alejandroq
 CONTAINER=docker-protractor
-make build
-docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+# make build
+# docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 docker run -v $PWD/examples/angular-example:/protractor -w /protractor  "$AUTHOR/$CONTAINER" ./test
