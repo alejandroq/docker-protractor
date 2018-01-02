@@ -7,3 +7,4 @@ docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 docker run -v $PWD/examples/angular-example:/protractor -w /protractor  "$AUTHOR/$CONTAINER" ./test
 docker run -v $PWD/examples/vanilla-js-protractor:/protractor -w /protractor  "$AUTHOR/$CONTAINER" ./test
 docker run -v $PWD/examples/vanilla-ts-protractor:/protractor -w /protractor  "$AUTHOR/$CONTAINER" ./test
+docker run -v $PWD/examples/cucumber-ts-protractor:/protractor -w /protractor  "$AUTHOR/$CONTAINER" ./test
