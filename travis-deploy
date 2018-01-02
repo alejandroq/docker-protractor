@@ -1,8 +1,8 @@
 # !/bin/bash
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-  make update TAG=latest
+  make update TAG=stable
 fi
 
 if [ "$TRAVIS_BRANCH" == "dev" ]; then
-  make update TAG=dev
+  make update TAG=latest
 fi
