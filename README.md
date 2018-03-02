@@ -6,7 +6,7 @@ Latest [![Build Status](https://travis-ci.org/alejandroq/docker-protractor.svg?b
 Run E2E suites in a Docker container. Chrome XVFB, documentation and permissions factored into usage. 
 
 Need in Protractor config:
-no-sandbox configuration
+no-sandbox configuration 
 
 ```js
 // Protractor Conf
